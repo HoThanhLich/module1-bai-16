@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xây-dựng-lớp-Date</title>
+</head>
+<body>
+<script>
+    class MyDate {
+        day;
+        month;
+        year;
+
+        constructor(day, month, year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+        }
+
+        getDay() {
+            return this.day;
+        }
+
+        getMonth() {
+            return this.month;
+        }
+
+        getYear() {
+            return this.year;
+        }
+
+        // setDay(day) {
+        //     this.day = day;
+        // }
+        // setMonth(month) {
+        //     this.month = month;
+        // }
+        // setYear(year) {
+        //     this.year = year;
+        // }
+        setDate(d, m, y) {
+            this.day = d;
+            this.month = m;
+            this.year = y;
+        }
+
+        convertDateForm() {
+
+            let dd = this.day
+            let mm = this.month
+            if (dd.toString().split("").length == 1) {
+                dd = '0' + dd;
+            }
+            if (mm.toString().split("").length == 1) {
+                 mm = '0' + mm;
+            }
+
+            return dd +"/"+mm+'/'+this.year;
+        }
+
+
+    }
+
+    let date = new MyDate(12, 1, 2007);
+
+    alert( date.convertDateForm());
+
+    date.convertDateForm();
+
+    date.setDate(13,1,2007);
+
+    alert( date.convertDateForm());
+
+
+
+</script>
+</body>
+</html>
