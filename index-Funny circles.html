@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>thuc-hanh-the-canvas</title>
+    <script src="Canvas_class.js"></script>
+</head>
+<body>
+<canvas id="myCanvas" width="1368px" height="768" style="border: 1px solid #d3d3d3"></canvas>
+<script>
+    let ctx = document.getElementById("myCanvas").getContext("2d");
+
+    function getRandomHex() {    // hàm random mầu
+        return Math.floor(Math.random() * 255);
+    }
+
+    function getRandomColor() {   // đổi màu random
+        let red = this.getRandomHex();
+        let green = this.getRandomHex();
+        let blue = this.getRandomHex();
+        return "rgb(" + red + "," + blue + "," + green + ")";
+    }
+    //
+    // function drawCircle() { //Vẽ hình tròn.
+    //     let x = Math.random() * window.innerWidth;
+    //     let y = Math.random() * window.innerHeight;
+    //     let radius = Math.floor(Math.random() * 80);
+    //     let color = getRandomColor()
+    //     let circle = new FunnyCricle(x, y, radius, color);
+    //     ctx.beginPath();          // vị trí bắt đầu vẽ
+    //     ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+    //     ctx.fillStyle = color;   // đổ mầu hình tròn.(phải đặt trước ctx.fill()).
+    //     ctx.fill();              // đổ mầu đen.
+    // }
+    //
+    // function drawMultiCircle() {    //Vẽ nhiều hình tròn.
+    //     clear();
+    //     for (let i = 0; i < 30; i++) {
+    //         drawCircle();
+    //     }
+    // }
+    //
+    // function clear() {          // hàm xóa canvas
+    //     ctx.clearRect(0, 0, 1368, 768);
+    // }
+    //
+    //
+    // let circle1 = new Circle(500, 50, 50, 'green');
+    //
+    // function moveCircle() {      // Hàm để di chuyển hình tròn
+    //     circle1.y += 50;
+    //     clear();
+    //     ctx.beginPath();
+    //     ctx.arc(circle1.x, circle1.y, circle1.radius, 0, 2 * Math.PI);
+    //     ctx.fillStyle = circle1.color;
+    //     ctx.fill();
+    // }
+
+    // setInterval(drawMultiCircle, 500);     // lặp vô hạn(500 nửa giây 1 lần)
+
+</script>
+</body>
+</html>
