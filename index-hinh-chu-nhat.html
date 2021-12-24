@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hinh chu nhat</title>
+    <script src="hinh-chu-nhat-class.js"></script>
+</head>
+<body>
+<canvas id="myCanvas" width="1368" height="768" style="border: 1px solid teal; background: LightYellow"></canvas>
+<p id=" hienThi"></p>
+<script>
+    let hinhChuNhat = new Rectangle(150,80);
+    hinhChuNhat.showRectangle();
+    document.writeln(`dien tich hinh chu nhat la: ${hinhChuNhat.tinhDienTich()}`)
+    document.writeln(`chu vi hinh chu nhat la: ${hinhChuNhat.tinhChuVi()}`)
+</script>
+</body>
+</html>
